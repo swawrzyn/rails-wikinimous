@@ -1,9 +1,13 @@
-<h1>All Articles</h1>
-<%= link_to "Add article", new_article_path %>
-<ul>
+<div class="container">
+  <div class="row">
 <% @articles.each do |article| %>
+  <div class="col col-xs-6 col-sm-4">
   <%= link_to article_path(article) do %>
-  <li><%= article.title %></li>
-  <% end %>
+  <div class="card">
+  <p><%= article.title %></p>
+    </div>
+    <% end %>
+  </div>
 <% end %>
-</ul>
+  </div>
+</div>
